@@ -86,7 +86,7 @@ void DualLibQPBMSOSVM::init()
 	set_solver(BMRM);
 }
 
-bool DualLibQPBMSOSVM::train_machine(std::shared_ptr<Features> data)
+bool DualLibQPBMSOSVM::train_machine(const std::shared_ptr<Features>& data, const std::shared_ptr<Labels>& labs)
 {
 	require(m_model, "Model has not been set.");
 	if (!m_w)
